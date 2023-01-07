@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "muiTest": {
+      "main": "src/muiTest/main.mo",
+      "type": "motoko"
+    },
+    "muiTest_assets": {
+      "dependencies": [
+        "muiTest"
+      ],
+      "frontend": {
+        "entrypoint": "src/muiTest_assets/src/index.html"
+      },
+      "source": [
+        "src/muiTest_assets/assets",
+        "dist/muiTest_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
